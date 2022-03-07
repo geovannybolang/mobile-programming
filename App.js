@@ -52,6 +52,8 @@ class Show extends Component {
   }
 }
 
+// Styling di react native
+// Di dalam styling ini, kami menggunakan styling layout dengan memiliki 3 warna (RGB colors)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
