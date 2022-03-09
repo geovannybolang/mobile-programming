@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     height: box_height
   },
   box1: {
-    backgroundColor: '#ee2222'
+    backgroundColor: '#ee3333'
   },
   box2: {
     backgroundColor: '#8BC34A'
