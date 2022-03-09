@@ -1,41 +1,57 @@
-import React from "react";
-import { SafeAreaView, Button, StyleSheet, TextInput, Text, Alert } from "react-native";
+import React, {useState, Component} from 'react';
+import {View, Button, StyleSheet, TextInput} from 'react-native';
 
-const UselessTextInput = () => {
-  const [text, onChangeText] = React.useState(null);
-  const [number, onChangeNumber] = React.useState(null);
-
-
+const App1= () => {
+  const [text, onChangeText] = React.useState({
+    Email: 'default',
+    Username: 'default',
+    Password: 'default',
+  });
 
   return (
-    <SafeAreaView>
+    <View>
       <TextInput
         style={styles.input}
-        onChangeText={null}
-        value={text}
-        placeholder="Username"
-        keyboardType="default"
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={null}
-        value={number}
+        onChangeText={val =>
+          onChangeText({
+            Email: val !== '' ? val : 'default',
+            Username: text.Username,
+            Password: text.Password,
+          })
+        }
         placeholder="Email"
-        keyboardType="email-address"
+        placeholderTextColor="grey"
       />
+
       <TextInput
         style={styles.input}
-        onChangeText={null}
-        value={number}
+        onChangeText={val =>
+          onChangeText({
+            Email: text.Email,
+            Username: val !== '' ? val : 'default',
+            Password: text.Password,
+          })
+        }
+        placeholder="Username"
+        placeholderTextColor="grey"
+      />
+
+      <TextInput
+        style={styles.input}
+        onChangeText={val =>
+          onChangeText({
+            Email: text.Email,
+            Username: text.Username,
+            Password: val !== '' ? val : 'default',
+          })
+        }
         placeholder="Password"
-        keyboardType="default"
+        placeholderTextColor="grey"
+        secureTextEntry={true}
       />
-      <Button
-        title="Sign Up"
-        onPress={() => Alert.alert('User')}
-      />
-      
-    </SafeAreaView>
+
+      <Button color="black" title="Button" onPress={() => console.log(text)} />
+    </View>
   );
 };
 
@@ -46,10 +62,21 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 10,
   },
-  title: {
-    textAlign: 'center',
-    marginVertical: 8,
-  },
 });
 
-export default UselessTextInput;
+export default App1;
+
+const style = StyleSheet.create({
+  tulisan: {
+    fontSize: 25,
+    color: 'white',
+    textAlign: 'center',
+  },
+
+  kotak_tulisan: {
+    backgroundColor: 'blue',
+    marginTop: 50,
+    paddingHorizontal: 30,
+    marginHorizontal: 10,
+  },
+});
