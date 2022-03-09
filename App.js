@@ -50,7 +50,10 @@ const App1= () => {
         secureTextEntry={true}
       />
 
-      <Button color="black" title="Button" onPress={() => console.log(text)} />
+      <Button
+      title="Button"
+      color="#0000FF" 
+      onPress={() => console.log(text)} />
     </View>
   );
 };
