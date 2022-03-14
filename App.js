@@ -51,7 +51,7 @@ const App1= () => {
       />
 
       <Button
-      title="Button"
+      title="Press"
       color="#008000" 
       onPress={() => console.log(text)} />
     </View>
