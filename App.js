@@ -52,7 +52,7 @@ const App1= () => {
 
       <Button
       title="Button"
-      color="#0000FF" 
+      color="#008000" 
       onPress={() => console.log(text)} />
     </View>
   );
