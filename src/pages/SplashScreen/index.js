@@ -1,6 +1,19 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {Logo} from '../../assets';
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#02CF8E',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  text: {
+    fontSize: 32,
+    fontFamily: 'Poppins-Regular',
+  },
+});
 
 const SplashScreen = ({navigation}) => {
   useEffect(() => {
@@ -18,16 +31,3 @@ const SplashScreen = ({navigation}) => {
 };
 
 export default SplashScreen;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#02CF8E',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 32,
-    fontFamily: 'Poppins-Regular',
-  },
-});

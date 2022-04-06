@@ -1,7 +1,5 @@
-import TextInput from "./TextInput";
-import Button from "./Button";
-import Gap from "./Gap";
+import Button from './Button';
+import TextInput from './Textinput';
+import Gap from './Gap';
 
-export {
-    TextInput, Button, Gap
-};
+export {Button, TextInput, Gap};

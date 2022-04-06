@@ -1,5 +1,4 @@
-import Header from "./Header";
+import Header from './Header';
+import Header_Home from './Header_home';
 
-export {
-    Header
-};
+export {Header, Header_Home};
